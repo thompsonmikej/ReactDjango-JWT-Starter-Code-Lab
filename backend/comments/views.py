@@ -19,8 +19,6 @@ def get_all_comments(request):
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def user_comments(request):
-    print(
-        'Comments ', f"{request.user.user} {request.user.video_id} {request.user.text} {request.user.likes} {request.user.dislikes}")
     if request.method == 'POST':
         serializer = CommentSerializer(data=request.data)
         if serializer.is_valid():
@@ -31,3 +29,4 @@ def user_comments(request):
         comments = Comment.objects.filter(user_id=request.user.video_id)
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
+
