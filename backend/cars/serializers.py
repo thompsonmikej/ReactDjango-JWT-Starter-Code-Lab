@@ -9,3 +9,5 @@ class CarSerializer(serializers.ModelSerializer):
         model = Car
         fields = ['id', 'make', 'model', 'year', 'user_id']
         depth = 1
+
+
