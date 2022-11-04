@@ -9,8 +9,9 @@ const HomePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [cars, setCars] = useState([]);
-
+  // const [cars, setCars] = useState([]);
+  const [videos, setVideos] = useState([])
+  
   useEffect(() => {
     const fetchCars = async () => {
       try {
@@ -26,6 +27,23 @@ const HomePage = () => {
     };
     fetchCars();
   }, [token]);
+
+  // function added
+
+useEffect(() => {
+  const fetchSearchData = async () => {
+    try {
+      let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${videoSearch}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw`);
+      console.log('YT API', error.response.items);
+
+    } catch (error) {
+      console.log('YT API', error.response.data)
+    }
+  };
+  fetchSearchData();
+}, [])
+  
+
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
