@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import './SearchBar.css';
+// user inputs search queries
 
 const SearchBar = (props) => {
     // hooks
