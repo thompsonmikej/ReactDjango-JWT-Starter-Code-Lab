@@ -16,15 +16,21 @@
 // }
 // export default PostList;
 import RelatedVideos from '../../components/RelatedVideos/RelatedVideos';
-// Search results appear here
-// is this necessary?
 
 const SearchPage = (props) => {
 
     return (
-        <div>SearchPage</div>
-        // <h2><RelatedVideos /></h2>
+        <div>SearchPage results</div>
+//             {props.parentList.map((entry, index) => {
+//                 return (
+//                     <Post entry={entry} index={index} />
+//                 )
+//             })}
+
+
+        // <RelatedVideos />
     )
 }
 
 export default SearchPage;
+

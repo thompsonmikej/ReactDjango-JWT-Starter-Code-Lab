@@ -26,11 +26,11 @@ function App() {
   const fetchSearchData = async (searchTerm) => {
     try {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw`);
-      console.log('YT API success', response.data.items);
+      console.log('App.js: Connection to external YouTube API success', response.data.items);
       setSearchResults(response.data.items)
 
     } catch (error) {
-      console.log('YT API', error.response.data)
+      console.log('App.js: Connection to external YouTube API error', error.response.data)
     }
   }
 
