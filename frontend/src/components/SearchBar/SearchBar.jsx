@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 // import './SearchBar.css';
 // user inputs search queries
 // see Video 1, Day 50
@@ -23,7 +25,7 @@ const SearchBar = (props) => {
                 {/* this is the child element that passes the value to the parent via fetchSearchData function */}
             </div>
             <div>
-                <button type='submit' className='btn'>Search</button>
+                    <button type='submit' className='btn'>Search</button>
             </div>
         </form>
     );

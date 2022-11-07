@@ -1,5 +1,5 @@
 // General Imports
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import axios from 'axios';
 import {useState} from 'react'
@@ -22,16 +22,16 @@ import RelatedVideos from "./components/RelatedVideos/RelatedVideos"
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
-
+  let navigate = useNavigate();
   const [searchResults, setSearchResults] = useState([])
 
   const fetchSearchData = async (searchTerm) => {
     try {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw`);
-      console.log('App.js: Connection to external YouTube API success', response.data.items);
-      setSearchResults(response.data.items)
-      console.log('App.js: searchResults', searchResults)
-      // <a href="/video"></a>
+          console.log('App.js: Connection to external YouTube API success', response.data.items);
+          setSearchResults(response.data.items)
+          console.log('App.js: searchResults', searchResults)
+          navigate('/video')
       //send user to '/video' - react router lecture, which one takes place in a function?
     } catch (error) {
       console.log('App.js: Connection to external YouTube API error', error.response.data)
