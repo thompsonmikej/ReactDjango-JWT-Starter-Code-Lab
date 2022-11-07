@@ -6,12 +6,12 @@ import React, { useState } from 'react';
 const SearchBar = (props) => {
     // hooks
     //the initial value for searchTerm, setSearchTerm re-sets it when user types a value into the search field below
-    const [searchTerm, setSearchTerm] = useState('Search for video');
+    const [searchTerm, setSearchTerm] = useState('Enter a video search term');
   
     function handleSubmit(postEvent) {
         postEvent.preventDefault();
-           console.log('SearchBar handleSubmit search term:', searchTerm);
-        props.fetchSearchData(searchTerm) 
+           console.log('SearchBar handleSubmit variable: searchTerm:', searchTerm);
+        props.fetchSearchData(searchTerm) //searchTerm contains the array of terms from within the function
 //    this is the event handler that sets or re-sets the searchTerm when the Search button is clicked
     }
 

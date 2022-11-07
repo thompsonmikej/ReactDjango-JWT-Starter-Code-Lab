@@ -16,6 +16,7 @@ import VideoPage from "./pages/VideoPage/VideoPage";
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SearchBar from "./components/SearchBar/SearchBar"
+import RelatedVideos from "./components/RelatedVideos/RelatedVideos"
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -23,12 +24,15 @@ import PrivateRoute from "./utils/PrivateRoute";
 function App() {
 
   const [searchResults, setSearchResults] = useState([])
+
   const fetchSearchData = async (searchTerm) => {
     try {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw`);
       console.log('App.js: Connection to external YouTube API success', response.data.items);
       setSearchResults(response.data.items)
-
+      console.log('App.js: searchResults', searchResults)
+      // <a href="/video"></a>
+      //send user to '/video' - react router lecture, which one takes place in a function?
     } catch (error) {
       console.log('App.js: Connection to external YouTube API error', error.response.data)
     }
@@ -50,7 +54,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/video" element={<VideoPage />} /> 
+        <Route path="/video" element={<VideoPage searchResults={searchResults} />} /> 
+        <Route path="/related" element={<RelatedVideos />} /> 
         {/* see Adding a Feature video for sub-features of Search and Video pages */}
       </Routes>
       <Footer />

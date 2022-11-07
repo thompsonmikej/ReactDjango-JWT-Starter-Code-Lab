@@ -1,36 +1,20 @@
-// group0
-// SearchBar.jsx
-
-// group1
-// SearchPage.jsx
-
-// group2
-// VideoPage.jsx
-// VideoPlayer.jsx
-// RelatedVideos.jsx
-
-// group2a
-// CommentList.jsx
-// CommentForm.jsx
-// Comment.jsx
-// ReplyList.jsx
-// import VideoPlayer from 'VideoPlayer'
-// Must return the name of the video:   response.data.items[1].id.videoID
-
-
-
-//
+import React from 'react';
 
 
 const VideoPage = (props) => {
 // segment of the page (container) with video player
-
+// Play a single video here
+    //[0].id.videoId
+    console.log('videoPage searchResults value:', props.searchResults)
+    let videoUrl = `http://www.youtube.com/embed/${props.searchResults[0].id.videoId}`;
+    
     return (
-        <><div>VideoPage</div><div>
-            <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"></iframe>
-
-        </div></>
-
+        <><h1>VideoPage</h1>
+                    <iframe id="ytplayer" type="text/html" width="640" height="360" src={videoUrl} autoplay="0" frameborder="0" ></iframe>
+            {/* https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.comautoplay=0&controls=1&showinfo=1 */}
+        
+        </>
+     
     )
 }
 
