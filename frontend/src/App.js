@@ -27,12 +27,12 @@ function App() {
 
   const fetchSearchData = async (searchTerm) => {
     try {
-      let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw`);
+      let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw&part=snippet`);
           console.log('App.js: Connection to external YouTube API success', response.data.items);
           setSearchResults(response.data.items)
           console.log('App.js: searchResults', searchResults)
           navigate('/video')
-      //send user to '/video' - react router lecture, which one takes place in a function?
+      //send user to '/video' - react router lecture, which one takes place in a function? see lines 2,25
     } catch (error) {
       console.log('App.js: Connection to external YouTube API error', error.response.data)
     }

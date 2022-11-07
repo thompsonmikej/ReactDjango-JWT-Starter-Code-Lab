@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 // import './SearchBar.css';
 // user inputs search queries
 // see Video 1, Day 50
-
+// sibling to VideoPage. user enters search value that triggers parent (App function). 
 const SearchBar = (props) => {
     // hooks
     //the initial value for searchTerm, setSearchTerm re-sets it when user types a value into the search field below
-    const [searchTerm, setSearchTerm] = useState('Enter a video search term');
+    const [searchTerm, setSearchTerm] = useState(''); //Enter a video search term
   
     function handleSubmit(postEvent) {
         postEvent.preventDefault();
