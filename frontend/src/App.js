@@ -28,9 +28,9 @@ function App() {
   const fetchSearchData = async (searchTerm) => {
     try {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw&part=snippet`);
-          console.log('App.js: Connection to external YouTube API success', response.data.items);
+          // console.log('App.js: Connection to external YouTube API success', response.data.items);
           setSearchResults(response.data.items)
-          console.log('App.js: searchResults', searchResults)
+          // console.log('App.js: searchResults', searchResults)
           navigate('/video')
       //send user to '/video' - react router lecture, which one takes place in a function? see lines 2,25
     } catch (error) {
@@ -42,6 +42,14 @@ function App() {
     <div>
       <Navbar />
       <SearchBar fetchSearchData={fetchSearchData} />
+      {searchResults.map((result)=>{
+        return (
+          console.log('App page searchResults :', result)
+          // console.log('App page searchResults :', result.snippet.title)
+          // console.log('App page searchResults :', result.snippet.thumbnails)
+        );
+})}
+
       <Routes>
         <Route
           path="/"
@@ -55,7 +63,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/video" element={<VideoPage searchResults={searchResults} />} /> 
-        <Route path="/related" element={<RelatedVideos />} /> 
+        <Route path="/related" element={<RelatedVideos RelatedVideos={searchResults} />} /> 
         {/* see Adding a Feature video for sub-features of Search and Video pages */}
       </Routes>
       <Footer />

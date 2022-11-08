@@ -1,54 +1,28 @@
-// Search results appear here
-// setSearchResults contains the 5 YT results
-// pass the results from App to here
-
+import React from 'react';
 
 const RelatedVideos = (props) => {
 
-    // function displayItems(props) {
-    //     let displayItems = props.searchResults.map(props.items)
-    //     console.log('VideoPage.js: displayItems', displayItems)
-    // }
-    
-//Need an array to capture the YT API success. The returns of 5 videos from searchTerm.
+    //very first step, console log your variables from props
+    //first step, just display video title in a p tag
+    //next step, transition to img tags with src=thumbnail url
+    //map through props.related and display a thumbnail for each
 
-    function searchByKeyword(props) {
-        let results = props.searchResults('id,snippet', { q: props.searchResults, maxResults: 6 });
-
-        for (var i in results.items) {
-            var item = results.items[i];
-            console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-        }
-    }
-
-    
     return (
-        <><div>RelatedVideos</div><div>
-            <table className='table'>
-                <thead>
-                    <tr>
-                        <th>Video Title</th>
-                        <th>Artist</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* {props.parentEntries.map((entry, index) => { */}
-                    {props.setSearchResults.map((items, index) => {
-                        return (
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{items.title}</td>
-                                <td>{items.artist}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
-
-        </div></>
-
-    );
+        <>
+            {props.related.map((video) => {
+                return (
+                    console.log('Related Videos: ', video.snippet.channelTitle, video.snippet.title, video.snippet.thumbnails)
+                    // <p>{video.snippet.title}</p>
+                    // <p>{video.snippet.description}</p>
+                )
+            //logic for displaying list of related videos
+                //links to video player, pass through the onClicked video
+            }
+            )}
+        </>
+    )
 }
+
+
 
 export default RelatedVideos;
