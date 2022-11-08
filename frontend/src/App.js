@@ -11,12 +11,11 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import VideoPage from "./pages/VideoPage/VideoPage";
 
-
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SearchBar from "./components/SearchBar/SearchBar"
-import RelatedVideos from "./components/RelatedVideos/RelatedVideos"
+import RelatedVideos from "./components/RelatedVideos/RelatedVideos";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -42,13 +41,11 @@ function App() {
     <div>
       <Navbar />
       <SearchBar fetchSearchData={fetchSearchData} />
-      {searchResults.map((result)=>{
+      {/* {searchResults.map((result)=>{
         return (
-          console.log('App page searchResults :', result)
-          // console.log('App page searchResults :', result.snippet.title)
-          // console.log('App page searchResults :', result.snippet.thumbnails)
+          console.log(`App page FOR RELATED VIDEOS searchResults \nthumbnails: ${result.snippet.thumbnails} \ntitle: ${result.snippet.title} \nchannel: ${result.snippet.channelTitle}`)
         );
-})}
+})} */}
 
       <Routes>
         <Route
@@ -62,7 +59,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/video" element={<VideoPage searchResults={searchResults} />} /> 
+        <Route path="/video" element={<VideoPage searchResults={searchResults} />} />  
         <Route path="/related" element={<RelatedVideos RelatedVideos={searchResults} />} /> 
         {/* see Adding a Feature video for sub-features of Search and Video pages */}
       </Routes>
