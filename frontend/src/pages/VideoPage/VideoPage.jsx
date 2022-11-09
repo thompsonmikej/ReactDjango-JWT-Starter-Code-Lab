@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import RelatedVideos from '../../components/RelatedVideos/RelatedVideos';
 import axios from 'axios';
+import './VideoPage.css'
 
 const VideoPage = (props) => {
     let videoID = props.searchResults[0].id.videoId
@@ -30,9 +31,9 @@ const VideoPage = (props) => {
     
 
     return (
-        <>
-            <VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} />
-            <RelatedVideos related={related} />
+        <><div className='page-container'>
+            <div><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} /></div>
+            <div className='page-column'><RelatedVideos related={related} /><hr/></div></div>
             {console.log('VideoPage.jsx related variable', related)}
         </>
         

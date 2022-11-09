@@ -17,8 +17,7 @@
     color: #000;
 }
 
-button {
-        /* border-radius: 10rem; */
+.btn {
         padding: .5rem;
         background-color: #7e0101;
         color: white
@@ -29,3 +28,4 @@ button {
     overflow: auto;
     text-align: center;
 }
+
