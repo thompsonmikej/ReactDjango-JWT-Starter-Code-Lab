@@ -2,12 +2,30 @@
     width:50%;
     margin-left:auto;
     margin-right:auto;
-    border: .5rem solid #000;
 }
 
-.btn{
-        margin-left: auto;
-        margin-right: auto;
-        border: .5rem solid #000;
+.form-control {
+    background-color: white;
+    border: .5rem solid #7e0101;
+    font-weight: bold;
+    
+}
+
+.form-group {
+    font-family: san-serif;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+button {
+        /* border-radius: 10rem; */
         padding: .5rem;
+        background-color: #7e0101;
+        color: white
+}
+.center {
+    margin: 0 auto;
+    max-width: 150rem;
+    overflow: auto;
+    text-align: center;
 }

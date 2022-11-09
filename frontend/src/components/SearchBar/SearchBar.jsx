@@ -1,27 +1,18 @@
 import React, { useState } from 'react';
-import './SearchBar';
-
-// user inputs search query; see Video 1, Day 50
-// sibling to VideoPage. user enters search value that triggers parent (App function). 
+import './SearchBar.css';
 
 const SearchBar = (props) => {
-    // hooks
-    //the initial value for searchTerm, setSearchTerm re-sets it when user types a value into the search field below
-    const [searchTerm, setSearchTerm] = useState(''); //Enter a video search term
+    const [searchTerm, setSearchTerm] = useState(''); 
   
     function handleSubmit(postEvent) {
         postEvent.preventDefault();
-        //    console.log('SearchBar handleSubmit variable: searchTerm:', searchTerm);
-        props.fetchSearchData(searchTerm) //searchTerm contains the array of terms from within the function
-//    this is the event handler that sets or re-sets the searchTerm when the Search button is clicked
-    }
+        props.fetchSearchData(searchTerm)    }
 
     return (
-        <form onSubmit={handleSubmit} className='form-grid'>
-            <div className='form-group top-label'>
+        <form onSubmit={handleSubmit} className='form-grid center'>
+            <div className='form-group'>
                 <label>Name your video, artist, channel, or creator</label>
-                <input type='text' className='form-control' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
-                {/* this is the child element that passes the value to the parent via fetchSearchData function */}
+                <input type='text' className='form-control center' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
             </div>
             <div>
                     <button type='submit' className='btn'>Search</button>

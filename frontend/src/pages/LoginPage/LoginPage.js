@@ -23,7 +23,7 @@ const LoginPage = () => {
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Username:{" "}
-          <input
+          <input className="input-border"
             type="text"
             name="username"
             value={formData.username}
@@ -32,7 +32,7 @@ const LoginPage = () => {
         </label>
         <label>
           Password:{" "}
-          <input
+          <input className="input-border"
             type="text"
             name="password"
             value={formData.password}

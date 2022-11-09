@@ -8,24 +8,30 @@ li {
   font-size: 1.25rem;
 }
 
+.logo-color{
+  color:yellow;
+}
+
 .navBar {
-  background: rgb(172, 0, 0);
-  box-shadow: 4px 2px 5px gray;
+  background: #7e0101;
+  box-shadow: 1rem .5rem 1.5rem gray;
   color: white;
   margin-bottom: 2rem;
-  padding: 1.5rem 2rem;
+  padding: 1.1rem 1.5rem;
+  font-family: revert, sans-serif;
 }
 
 .navBar button {
   background: transparent;
-  border: 2px solid white;
+  border: .25rem solid white;
   color: white;
   padding: 0.4rem 0.5rem;
+  border-radius: 1rem;
 }
 
 .navBar button:hover {
   background: white;
-  color: rgb(172, 0, 0);
+  color: #7e0101;
   cursor: pointer;
 }
 

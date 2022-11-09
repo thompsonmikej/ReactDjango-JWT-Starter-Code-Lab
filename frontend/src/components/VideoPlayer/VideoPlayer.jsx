@@ -1,7 +1,6 @@
 import React from 'react';
 
 const VideoPlayer = (props) => {
-// import iframe here; embed this page onto videoPage
         return (
             <><><h1>{props.videoSnippet.snippet.title}</h1>
                 <p>{props.videoSnippet.snippet.description}</p>

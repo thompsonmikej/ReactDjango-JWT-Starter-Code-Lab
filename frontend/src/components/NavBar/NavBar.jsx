@@ -12,7 +12,7 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>YouTube Clone React/Django JWT</b>
+            <b><span className="logo-color">YouTube Clone</span><span> React/Django JWT</span></b>
           </Link>
         </li>
         <li>

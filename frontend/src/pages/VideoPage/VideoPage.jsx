@@ -4,8 +4,6 @@ import RelatedVideos from '../../components/RelatedVideos/RelatedVideos';
 import axios from 'axios';
 
 const VideoPage = (props) => {
-// segment of the page (container) with video player; will contain links for related videos
-// videoPage pulls YouTube searchResults
     let videoID = props.searchResults[0].id.videoId
     let videoUrl = `http://www.youtube.com/embed/${videoID}`;
     let videoSnippet = props.searchResults[0]
@@ -19,10 +17,7 @@ const VideoPage = (props) => {
         }, [props.searchResults])
 
     async function getRelatedVideos () {
-        //API call #2 to get related videos, include snippet
-        //  it will trigger getting related videos when user searches
-        //save them to state-- SET RELATED
-        try {
+          try {
             console.log('videoID', videoID)
             let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?relatedToVideoId=${videoID}&type=video&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw&part=snippet`);
             setRelated(response.data.items);
@@ -35,8 +30,9 @@ const VideoPage = (props) => {
     
 
     return (
-        <><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} />
-        <RelatedVideos related={related} />
+        <>
+            <VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} />
+            <RelatedVideos related={related} />
             {console.log('VideoPage.jsx related variable', related)}
         </>
         
