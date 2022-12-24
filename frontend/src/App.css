@@ -8,38 +8,42 @@
   box-sizing: inherit;
 }
 
+.container, html, #root {
+    background-color: black;
+    color: white;
+    letter-spacing: .1rem;
+}
+
+.navBar, footer, .container, html, #root, .brand, {
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+
 html {
   box-sizing: border-box;
 }
 body {
-    font-family: "revert", sans-serif;
-    background-color: rgb(185, 185, 185);
+    /* font-family: "revert", sans-serif; */
+    /* background-color: rgb(185, 185, 185); */
 }
 
-p {
+p, button {
   font-size: 1rem;
 }
 
 button {
   background-color: transparent;
-  border: 2px solid #000;
-  border-radius: 10rem;
+  border: .15rem solid white;
+  /* border-radius: 25 =rem; */
   color: #000;
-  font-size: 1rem;
-  font-family: revert, sans-serif;
-  max-width: 100px;
+  max-width: 25rem;
   padding: 0.5rem 0.5rem;
-}
-
-button:hover {
-  cursor: pointer;
-  color: white;
-  background-color: rgb(172,0,0);
+  margin-left: 1rem;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 200rem;
+  max-width: 50rem;
   overflow: auto;
   text-align: center;
 }
@@ -50,13 +54,25 @@ button:hover {
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
+  margin-top: .5rem;
 }
 
 .form input {
-  display: block;
-  width: 100%;
-  height: 2.5rem;
+  /* display: block; */
+  width: 15rem;
+  height: 1.75rem;
   margin: .25rem;
-  padding: 1.5rem 3rem;
-  font-size: 2rem;
+  padding: 1rem .5rem;
+  font-size: 1.25rem;
+  /* margin-right:auto;  */
+}
+
+.page-bottom{
+  margin-bottom: 10rem;
+}
+
+.nav-search {
+      display: flex;
+      flex-direction: column-reverse;
+
 }

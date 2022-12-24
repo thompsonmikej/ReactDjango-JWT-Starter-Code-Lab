@@ -1,0 +1,8 @@
+.display {
+    display:table-caption;
+    margin-left: 150%;
+}
+
+.text-width {
+    width: 15rem;
+}

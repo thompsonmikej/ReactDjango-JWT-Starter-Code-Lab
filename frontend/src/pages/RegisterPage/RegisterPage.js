@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import './RegisterPage.css'
 
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
@@ -8,8 +9,8 @@ const RegisterPage = () => {
     username: "",
     email: "",
     password: "",
-    firstName: "",
-    lastName: "",
+    // firstName: "",
+    // lastName: "",
   };
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
@@ -18,9 +19,9 @@ const RegisterPage = () => {
 
   return (
     <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form display" onSubmit={handleSubmit}>
         <label>
-          Username:{" "}
+          Username{" "}
           <input
             type="text"
             name="username"
@@ -28,7 +29,8 @@ const RegisterPage = () => {
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        {/* <div> */}
+        {/* <label>
           First Name:{" "}
           <input
             type="text"
@@ -45,9 +47,10 @@ const RegisterPage = () => {
             value={formData.lastName}
             onChange={handleInputChange}
           />
-        </label>
+          </label></div> */}
+        <div>
         <label>
-          Email:{" "}
+          Email{" "}
           <input
             type="text"
             name="email"
@@ -56,20 +59,21 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Password:{" "}
+          Password{" "}
           <input
             type="text"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
           />
-        </label>
-        <p style={{ fontSize: "12px" }}>
-          NOTE: Make this an uncommon password with characters, numbers, and
-          special characters!
+        </label></div>
+        <div className="text-width">
+        <p>
+          Password: An uncommon combination of characters, numbers, and
+          special character.
         </p>
-        <button>Register!</button>
-      </form>
+        <button>Register!</button></div>
+      </form><div className="page-bottom"></div>
     </div>
   );
 };

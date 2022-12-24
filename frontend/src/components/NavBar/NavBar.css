@@ -4,38 +4,44 @@ ul {
   list-style-type: none;
 }
 
-li {
+a, li {
   font-size: 1.25rem;
-}
-
-.logo-color{
-  color:yellow;
+  text-decoration: none;
+  color:#7e0101;
 }
 
 .navBar {
-  background: #7e0101;
-  box-shadow: 1rem .5rem 1.5rem gray;
+  /* background: black; */
+  box-shadow: 1rem .5rem 1rem #7e0101;
   color: white;
   margin-bottom: 2rem;
   padding: 1.1rem 1.5rem;
-  font-family: revert, sans-serif;
+  height: 4rem;
+  margin-top: -3.5rem; 
 }
 
 .navBar button {
   background: transparent;
-  border: .25rem solid white;
+  border: .15rem solid white;
   color: white;
-  padding: 0.4rem 0.5rem;
-  border-radius: 1rem;
+  padding: 0.6rem 0.2rem;
+  border-radius: .75rem;
+  height: 4rem;
 }
 
-.navBar button:hover {
+.brand:hover, button:hover, a:hover, li:hover {
   background: white;
   color: #7e0101;
+  font-weight: bolder;
   cursor: pointer;
+  text-decoration: none;
 }
+
 
 .brand {
   cursor: pointer;
   font-size: 2rem;
+  color: white;
+  text-decoration: underline;
 }
+

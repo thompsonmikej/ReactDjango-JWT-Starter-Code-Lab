@@ -10,13 +10,13 @@ const SearchBar = (props) => {
 
     return (
         <form onSubmit={handleSubmit} className='form-grid center'>
-            <div className='form-group'>
-                <label>Name your video, artist, channel, or creator</label>
-                <input type='text' className='form-control center' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
+            <div className="search-block"><div className='form-group'>
+                <label>  Name a video, channel, or creator</label>
+                <input type='text' className='form-control-local' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
             </div>
             <div>
-                    <button type='submit' className='btn'>Search</button>
-            </div>
+                 <button type='submit' className="search-btn" >Search</button>
+            </div></div>
         </form>
     );
 }

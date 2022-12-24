@@ -4,28 +4,45 @@
     margin-right:auto;
 }
 
-.form-control {
+.form-control-local {
     background-color: white;
     border: .5rem solid #7e0101;
-    font-weight: bold;
-    
+    width: 55%;
+    border-radius: 0rem;
+    /* border-bottom: 2em;   */
 }
 
 .form-group {
-    font-family: san-serif;
     font-size: 1.25rem;
     color: #000;
 }
 
-.btn {
+button {
         padding: .5rem;
         background-color: #7e0101;
-        color: white
+        border-radius: 1rem;
+        color: white; 
 }
 .center {
     margin: 0 auto;
-    max-width: 150rem;
+    max-width: 125%;
     overflow: auto;
     text-align: center;
 }
 
+.search-block { 
+    display: flex;
+    align-items: flex-end;
+    margin-left:-2rem;   
+}
+
+.search-btn {
+    margin-left:-8rem;
+    background-color: #7e0101;
+}
+
+label{
+    color:white;
+    font-size: 1rem;
+    text-align: left;
+}

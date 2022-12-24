@@ -39,8 +39,10 @@ function App() {
 
   return (
     <div>
+      <div className="nav-search">
       <Navbar />
       <SearchBar fetchSearchData={fetchSearchData} />
+      </div>
       {/* {searchResults.map((result)=>{
         return (
           console.log(`App page FOR RELATED VIDEOS searchResults \nthumbnails: ${result.snippet.thumbnails} \ntitle: ${result.snippet.title} \nchannel: ${result.snippet.channelTitle}`)
