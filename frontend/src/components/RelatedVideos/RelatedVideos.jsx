@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './RelatedVideos.css'
 
 const RelatedVideos = (props) => {
     return (

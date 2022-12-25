@@ -16,7 +16,7 @@ p {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
     width: 120%;
     height: 120%; 
 }   
@@ -26,5 +26,9 @@ hr {
 }
 
 .page-container {
+    display:grid;
+    grid-template-areas: "l m r";
+    gap: 3rem;
+    /* align-items: ; */
 
 }

@@ -16,6 +16,10 @@ import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SearchBar from "./components/SearchBar/SearchBar"
 import RelatedVideos from "./components/RelatedVideos/RelatedVideos";
+import CommentPosts from "./components/CommentPosts/CommentPosts";
+import CommentsForm from "./components/CommentsForm/CommentsForm";
+import CommentsList from "./components/CommentsList/CommentsList";
+
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -62,6 +66,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/search" element={<SearchPage />} /> */}
         <Route path="/video" element={<VideoPage searchResults={searchResults} />} />  
+        <Route path="/comment_posts" element={<CommentPosts searchResults={searchResults} />} />  
+        <Route path="/comment_form" element={<CommentsForm searchResults={searchResults} />} />  
+        <Route path="/comments_list" element={<CommentsList searchResults={searchResults} />} />  
+        
         <Route path="/related" element={<RelatedVideos RelatedVideos={searchResults} />} /> 
         {/* see Adding a Feature video for sub-features of Search and Video pages */}
       </Routes>

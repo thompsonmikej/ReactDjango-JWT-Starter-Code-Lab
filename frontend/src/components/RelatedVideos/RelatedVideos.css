@@ -1,0 +1,5 @@
+.video-container {
+    text-align: end;
+    display: flex;
+    flex-wrap: nowrap;
+}
