@@ -22,7 +22,7 @@ urlpatterns = [
     path('api/auth/', include('authentication.urls')),
     path('api/cars/', include('cars.urls')),
     path('api/comments/', include('comments.urls')),
-    # path('api/replies/', include('replies.urls')),
+    path('api/replies/', include('replies.urls')),
     # path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
 ]
