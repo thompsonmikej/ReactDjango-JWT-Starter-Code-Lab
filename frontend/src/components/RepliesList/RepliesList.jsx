@@ -1,4 +1,4 @@
-const ReplyList = (props) => {
+const RepliesList = (props) => {
 // captures replies to user comments
     
     return (
@@ -7,4 +7,4 @@ const ReplyList = (props) => {
     )
 }
 
-export default ReplyList;
+export default RepliesList;
