@@ -1,8 +1,6 @@
 .display {
     display:table-caption;
     margin-left: 150%;
+    display: initial;
 }
 
-.text-width {
-    width: 15rem;
-}

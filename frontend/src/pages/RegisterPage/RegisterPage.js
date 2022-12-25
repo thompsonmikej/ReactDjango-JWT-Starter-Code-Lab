@@ -9,8 +9,8 @@ const RegisterPage = () => {
     username: "",
     email: "",
     password: "",
-    // firstName: "",
-    // lastName: "",
+    firstName: "",
+    lastName: "",
   };
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
@@ -19,7 +19,7 @@ const RegisterPage = () => {
 
   return (
     <div className="container">
-      <form className="form display" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
           Username{" "}
           <input
@@ -29,8 +29,8 @@ const RegisterPage = () => {
             onChange={handleInputChange}
           />
         </label>
-        {/* <div> */}
-        {/* <label>
+        <div>
+        <label>
           First Name:{" "}
           <input
             type="text"
@@ -47,7 +47,7 @@ const RegisterPage = () => {
             value={formData.lastName}
             onChange={handleInputChange}
           />
-          </label></div> */}
+          </label></div>
         <div>
         <label>
           Email{" "}
@@ -66,13 +66,13 @@ const RegisterPage = () => {
             value={formData.password}
             onChange={handleInputChange}
           />
-        </label></div>
+        </label></div><br/>
         <div className="text-width">
         <p>
           Password: An uncommon combination of characters, numbers, and
           special character.
         </p>
-        <button>Register!</button></div>
+        <button>Create</button></div>
       </form><div className="page-bottom"></div>
     </div>
   );

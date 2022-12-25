@@ -29,11 +29,11 @@ const VideoPage = (props) => {
         }
     }
     
-
     return (
         <><div className='page-container'>
-            <div><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} /></div>
-            <div className='page-column'><RelatedVideos related={related} /><hr/></div></div>
+            <div className="video-display"><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} /></div>
+            <div><h2>Related Videos</h2>
+                <div className='page-column'><RelatedVideos related={related} /><hr /></div></div></div>
             {console.log('VideoPage.jsx related variable', related)}
         </>
         

@@ -58,13 +58,12 @@ button {
 }
 
 .form input {
-  /* display: block; */
   width: 15rem;
   height: 1.75rem;
   margin: .25rem;
   padding: 1rem .5rem;
   font-size: 1.25rem;
-  /* margin-right:auto;  */
+  font-weight: bold;
 }
 
 .page-bottom{

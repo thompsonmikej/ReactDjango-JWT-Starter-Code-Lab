@@ -3,12 +3,28 @@ height: 20rem;
 width: 20rem;
 }
 
-/* p {
-    font-size: 1.25rem;
+p {
+    font-size: 1rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
-} */
+    width: 100%;
+}
+
+.video-display {
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 120%;
+    height: 120%; 
+}   
 
 hr {
     color:#7e0101;
+}
+
+.page-container {
+
 }

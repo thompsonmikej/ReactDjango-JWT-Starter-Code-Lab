@@ -6,10 +6,9 @@
 
 .form-control-local {
     background-color: white;
-    border: .5rem solid #7e0101;
     width: 55%;
     border-radius: 0rem;
-    /* border-bottom: 2em;   */
+
 }
 
 .form-group {
@@ -39,6 +38,9 @@ button {
 .search-btn {
     margin-left:-8rem;
     background-color: #7e0101;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding: .1rem .6rem;
 }
 
 label{

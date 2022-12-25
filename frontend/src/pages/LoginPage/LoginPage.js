@@ -33,7 +33,7 @@ const LoginPage = () => {
         <label>
           Password:{" "}
           <input className="input-border"
-            type="text"
+            type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
