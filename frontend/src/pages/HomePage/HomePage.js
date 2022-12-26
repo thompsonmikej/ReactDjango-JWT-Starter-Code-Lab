@@ -35,7 +35,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>{user.username}, <br/ >Choose your viewing entertainment!</h1>
+      <h1>{user.username}, <br/ >Search above for a video, artist, or channel!</h1>
       {cars &&
         cars.map((car) => (
           <p key={car.id}>

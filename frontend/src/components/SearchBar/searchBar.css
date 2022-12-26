@@ -6,14 +6,14 @@
 
 .form-control-local {
     background-color: white;
-    width: 55%;
-    border-radius: 0rem;
-
+    width: 90%;
+    /* border-radius: 02rem; */
+        
 }
 
-.form-group {
-    font-size: 1.25rem;
-    color: #000;
+.form-group, .search-btn, label {
+    font-size: 1.15rem;
+
 }
 
 button {
@@ -32,11 +32,11 @@ button {
 .search-block { 
     display: flex;
     align-items: flex-end;
-    margin-left:-2rem;   
+    margin-left:20%;   
 }
 
 .search-btn {
-    margin-left:-8rem;
+    /* margin-left:1rem; */
     background-color: #7e0101;
     height: 2rem;
     font-size: 1.1rem;

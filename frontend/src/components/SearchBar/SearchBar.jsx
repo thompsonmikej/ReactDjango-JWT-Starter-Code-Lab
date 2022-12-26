@@ -11,7 +11,7 @@ const SearchBar = (props) => {
     return (
         <form onSubmit={handleSubmit} className='form-grid center'>
             <div className="search-block"><div className='form-group'>
-                <label>  Name a video, channel, or creator</label>
+                <label> _</label>
                 <input type='text' className='form-control-local' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
             </div>
             <div>

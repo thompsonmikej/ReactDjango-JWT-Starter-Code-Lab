@@ -1,5 +1,14 @@
 .video-container {
     text-align: end;
-    display: flex;
+    display: table-column;
     flex-wrap: nowrap;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.thumbnail {
+    width:auto;
+    height:auto;
 }

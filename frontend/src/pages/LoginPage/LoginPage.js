@@ -42,8 +42,8 @@ const LoginPage = () => {
         {isServerError ? (
           <p className="error">Invalid credentials. Please try your username or password again.</p>
         ) : null}
-        <Link to="/register">Create New Account.</Link>
         <button>Login</button>
+        <Link to="/register">Create New Account.</Link>
       </form>
     </div>
   );

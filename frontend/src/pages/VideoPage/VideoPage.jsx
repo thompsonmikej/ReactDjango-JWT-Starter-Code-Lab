@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import RelatedVideos from '../../components/RelatedVideos/RelatedVideos';
 import axios from 'axios';
@@ -31,9 +32,12 @@ const VideoPage = (props) => {
     
     return (
         <><div className='page-container'>
-            <div className="video-display"><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} /></div>
-            <div><h2>Related Videos</h2>
-                <div className='page-column'><RelatedVideos related={related} /><hr /></div></div></div>
+            <div className="video-display iframe-video"><VideoPlayer videoUrl={videoUrl} videoSnippet={videoSnippet} searchResults={props.searchResults} /></div>
+            <Link to="/comments_list">View Comments</Link></div>
+            <div>
+                <h2>Related Videos</h2>
+                <div className='page-column'><RelatedVideos related={related} /><hr /></div>
+            </div>
             {console.log('VideoPage.jsx related variable', related)}
         </>
         

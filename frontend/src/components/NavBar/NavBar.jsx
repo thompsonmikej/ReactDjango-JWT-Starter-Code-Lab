@@ -15,11 +15,6 @@ const Navbar = () => {
             <span className="brand"><b>YouTube Clone</b></span>
           </Link>
         </li>
-        {/* <li >
-          <Link to="/related" >
-            <span className="brand">Related</span>
-          </Link>
-        </li> */}
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>

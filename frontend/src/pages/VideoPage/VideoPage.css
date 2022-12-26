@@ -1,6 +1,6 @@
 .thumbnails {
-height: 20rem;
-width: 20rem;
+    height: 20rem;
+    width: 20rem;
 }
 
 p {
@@ -28,7 +28,14 @@ hr {
 .page-container {
     display:grid;
     grid-template-areas: "l m r";
-    gap: 3rem;
+    gap: 1rem;
     /* align-items: ; */
 
 }
+
+.iframe-video {
+    width: 66%;
+    height: 100%;
+    margin-top: 1rem;
+}
+
