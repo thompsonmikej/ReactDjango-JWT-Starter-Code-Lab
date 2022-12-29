@@ -31,11 +31,8 @@ function App() {
   const fetchSearchData = async (searchTerm) => {
     try {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=AIzaSyCiEUXiKBaGw-dlhtxY7ZSBTF-5lPjAUrw&part=snippet`);
-          // console.log('App.js: Connection to external YouTube API success', response.data.items);
           setSearchResults(response.data.items)
-          // console.log('App.js: searchResults', searchResults)
           navigate('/video')
-      //send user to '/video' - react router lecture, which one takes place in a function? see lines 2,25
     } catch (error) {
       console.log('App.js: Connection to external YouTube API error', error.response.data)
     }
@@ -44,36 +41,29 @@ function App() {
   return (
     <div>
       <div className="nav-search">
-      <Navbar />
-      <SearchBar fetchSearchData={fetchSearchData} />
+      <Navbar><SearchBar fetchSearchData={fetchSearchData} /></Navbar>
       </div>
-      {/* {searchResults.map((result)=>{
-        return (
-          console.log(`App page FOR RELATED VIDEOS searchResults \nthumbnails: ${result.snippet.thumbnails} \ntitle: ${result.snippet.title} \nchannel: ${result.snippet.channelTitle}`)
-        );
-})} */}
-
       <Routes>
         <Route
           path="/"
           element={
             <PrivateRoute>
-              <HomePage />
+              {/* <HomePage /> */}
+              <CommentsForm />
             </PrivateRoute>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/search" element={<SearchPage />} /> */}
         <Route path="/video" element={<VideoPage searchResults={searchResults} />} />  
         <Route path="/comment_posts" element={<CommentPosts searchResults={searchResults} />} />  
-        <Route path="/comment_form" element={<CommentsForm searchResults={searchResults} />} />  
-        <Route path="/comments_list" element={<CommentsList searchResults={searchResults} />} />  
+        <Route path="/comments_form" element={<CommentsForm searchResults={searchResults} />} />  
+        {/* <Route path="/comments_list" element={<CommentsList searchResults={searchResults} />} />   */}
+        <Route path="/comments_list" element={<PrivateRoute><CommentsForm /></PrivateRoute>} />  
         
         <Route path="/related" element={<RelatedVideos RelatedVideos={searchResults} />} /> 
-        {/* see Adding a Feature video for sub-features of Search and Video pages */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import SearchBar from "../SearchBar/SearchBar";
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -14,6 +15,9 @@ const Navbar = () => {
           <Link to="/" >
             <span className="brand"><b>YouTube Clone</b></span>
           </Link>
+        </li>
+        <li >
+          <span><SearchBar className="form-input" /></span>
         </li>
         <li>
           {user ? (

@@ -21,23 +21,20 @@ const RegisterPage = () => {
     <div className="container">
       <form className="form" onSubmit={handleSubmit}>
         <label>
-          Username{" "}
+          Username:{" "}
           <input
             type="text"
             name="username"
             value={formData.username}
-            onChange={handleInputChange}
-          />
+            onChange={handleInputChange} />
         </label>
-        <div>
         <label>
           First Name:{" "}
           <input
             type="text"
             name="firstName"
             value={formData.firstName}
-            onChange={handleInputChange}
-          />
+            onChange={handleInputChange} />
         </label>
         <label>
           Last Name:{" "}
@@ -45,35 +42,27 @@ const RegisterPage = () => {
             type="text"
             name="lastName"
             value={formData.lastName}
-            onChange={handleInputChange}
-          />
-          </label></div>
-        <div>
+            onChange={handleInputChange} />
+        </label>
         <label>
-          Email{" "}
+          Email:{" "}
           <input
             type="text"
             name="email"
             value={formData.email}
-            onChange={handleInputChange}
-          />
+            onChange={handleInputChange} />
         </label>
         <label>
-          Password{" "}
+          Password*:{" "}
           <input
-            type="text"
+            type="password"
             name="password"
             value={formData.password}
-            onChange={handleInputChange}
-          />
-        </label></div><br/>
-        <div className="text-width">
-        <p>
-          Password: An uncommon combination of characters, numbers, and
-          special character.
-        </p>
-        <button>Create</button></div>
-      </form><div className="page-bottom"></div>
+            onChange={handleInputChange} />
+        </label>
+        <p>*Your unique combination of 8 letters, numbers, and special characters.</p>
+        <button>Create Account</button>
+      </form>
     </div>
   );
 };

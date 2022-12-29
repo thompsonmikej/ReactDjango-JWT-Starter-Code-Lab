@@ -9,9 +9,8 @@ const SearchBar = (props) => {
         props.fetchSearchData(searchTerm)    }
 
     return (
-        <form onSubmit={handleSubmit} className='form-grid center'>
+        <form onSubmit={handleSubmit}>
             <div className="search-block"><div className='form-group'>
-                <label> _</label>
                 <input type='text' className='form-control-local' onChange={(event) => setSearchTerm(event.target.value)} value={searchTerm} />
             </div>
             <div>

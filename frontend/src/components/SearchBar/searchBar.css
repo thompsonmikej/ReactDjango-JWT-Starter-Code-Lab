@@ -32,7 +32,7 @@ button {
 .search-block { 
     display: flex;
     align-items: flex-end;
-    margin-left:20%;   
+    height: 2rem;   
 }
 
 .search-btn {
