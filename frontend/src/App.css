@@ -21,11 +21,9 @@
 
 html {
   box-sizing: border-box;
+
 }
-body {
-    /* font-family: "revert", sans-serif; */
-    /* background-color: rgb(185, 185, 185); */
-}
+
 
 p, button {
   font-size: 1rem;
@@ -34,7 +32,6 @@ p, button {
 button {
   background-color: transparent;
   border: .15rem solid white;
-  /* border-radius: 25 =rem; */
   color: #000;
   max-width: 25rem;
   padding: 0.5rem 0.5rem;
@@ -74,3 +71,15 @@ button {
       display: flex;
       flex-direction: column-reverse;
 }
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #7e0101;
+  border-radius: 0rem;
+}
+
+.schedule-button {
+  display: contents;
+}
+

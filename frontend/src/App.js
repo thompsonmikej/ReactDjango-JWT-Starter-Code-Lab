@@ -1,28 +1,28 @@
 // General Imports
-import { Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
 import axios from 'axios';
-import {useState} from 'react'
+import { useNavigate } from "react-router-dom";
+import "./App.css";
 
 // Pages Imports
-import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-// import SearchPage from "./pages/SearchPage/SearchPage";
-import VideoPage from "./pages/VideoPage/VideoPage";
+import VideoPage from "./pages/VideoPage/VideoPage"
+import RelatedVideos from "./components/RelatedVideos/RelatedVideos"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
-import SearchBar from "./components/SearchBar/SearchBar"
-import RelatedVideos from "./components/RelatedVideos/RelatedVideos";
+// import Footer from "./components/Footer/Footer";
+import UserCommentsComponent from "./components/UserCommentsComponent/UserCommentsComponent";
+import SearchBar from "./components/SearchBar/SearchBar";
+import CommentsList from "./components/CommentsList/CommentsList";
 import CommentPosts from "./components/CommentPosts/CommentPosts";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
-import CommentsList from "./components/CommentsList/CommentsList";
-
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import LoggedInUser from "./utils/LoggedInUser";
 
 function App() {
   let navigate = useNavigate();
@@ -48,17 +48,19 @@ function App() {
           path="/"
           element={
             <PrivateRoute>
-              {/* <HomePage /> */}
-              <CommentsForm />
+
+              <LoggedInUser>
+                <UserCommentsComponent />
+                {/* <HomePage /> */}
+              </LoggedInUser>
             </PrivateRoute>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
+        {/* <Route path="/home" element={<HomePage />} /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/video" element={<VideoPage searchResults={searchResults} />} />  
         <Route path="/comment_posts" element={<CommentPosts searchResults={searchResults} />} />  
-        <Route path="/comments_form" element={<CommentsForm searchResults={searchResults} />} />  
-        {/* <Route path="/comments_list" element={<CommentsList searchResults={searchResults} />} />   */}
         <Route path="/comments_list" element={<PrivateRoute><CommentsForm /></PrivateRoute>} />  
         
         <Route path="/related" element={<RelatedVideos RelatedVideos={searchResults} />} /> 

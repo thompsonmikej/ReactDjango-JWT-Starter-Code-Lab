@@ -11,8 +11,7 @@ const VideoPage = (props) => {
     let videoID = props.searchResults[0].id.videoId
     let videoUrl = `http://www.youtube.com/embed/${videoID}`;
     let videoSnippet = props.searchResults[0]
-    
-
+        
     const [related, setRelated] = useState([])
     
     useEffect(() => {

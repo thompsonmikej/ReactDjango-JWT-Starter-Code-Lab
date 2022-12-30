@@ -29,10 +29,11 @@ a, li {
   margin-right: 2rem;
 }
 
-.brand:hover, button:hover, a:hover, li:hover {
+.brand:hover, button:hover, a:hover {
   background: white;
   color: #7e0101;
   font-weight: bolder;
+  border-radius: 2rem;
   cursor: pointer;
   text-decoration: none;
 }

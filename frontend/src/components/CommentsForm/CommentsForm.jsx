@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 // import './CommentsForm.css';
 
 const CommentsForm = (props) => {
-    // hooks
     const [userName, setUserName] = useState('Username here');
     const [userComment, setUserComment] = useState('Write here');
 

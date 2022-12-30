@@ -7,7 +7,7 @@
 .form-control-local {
     background-color: white;
     width: 90%;
-    /* border-radius: 02rem; */
+    
         
 }
 
@@ -19,7 +19,6 @@
 button {
         padding: .5rem;
         background-color: #7e0101;
-        border-radius: 1rem;
         color: white; 
 }
 .center {

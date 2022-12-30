@@ -26,7 +26,7 @@ const CommentsList = (props) => {
                     });
                 setComments(response.data);
             } catch (error) {
-                console.log('Error in Grad_ready', error);
+                console.log('Error in comments list', error);
             }
         };
         fetchComments();

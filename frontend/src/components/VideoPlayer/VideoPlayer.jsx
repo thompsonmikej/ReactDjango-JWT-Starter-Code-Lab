@@ -7,7 +7,7 @@ const VideoPlayer = (props) => {
 
                 {console.log('VideoPlayer snippet result: ', props.videoSnippet.snippet.description)}
              
-                <iframe id="ytplayer" type="text/html" width="640" height="360" src={props.videoUrl} autoPlay="0" frameBorder="0"></iframe>
+                <iframe id="ytplayer" type="text/html" width="960" height="640" src={props.videoUrl} autoPlay="0" frameBorder="0"></iframe>
             </></>
         )
     }
